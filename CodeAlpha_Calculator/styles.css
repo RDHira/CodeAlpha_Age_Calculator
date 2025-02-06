@@ -1,0 +1,111 @@
+/* Basic styling for the calculator container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #807b8b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .calculator {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+    padding: 25px;
+  }
+  .alpha{
+    text-align: center;
+    font-weight: bold;
+    color: #9216bb;
+    font-size: 40px;
+}
+.code{
+    text-decoration: underline;
+    color: #0a0753;
+  }
+  
+  .display {
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    word-wrap: break-word;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .button {
+    background: #e0e0e0;
+    border: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background 0.3s; */
+  }
+  
+  .button.operator {
+    background: #ff9500;
+    color: #fff;
+  }
+  
+  .button.equals {
+    grid-column: span 2;
+    background: #007aff;
+    color: #fff;
+  }
+  
+  .button.clear {
+    background: #ff3b30;
+    color: #fff;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  /* Adjust calculator width and button padding for smaller screens */
+  @media (max-width: 480px) {
+    .calculator {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .display {
+      font-size: 1.5rem;
+      padding: 8px;
+      min-height: 40px;
+    }
+  
+    .button {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Further adjustments for very small screens */
+  @media (max-width: 320px) {
+    .button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    .display {
+      font-size: 1.2rem;
+      padding: 5px;
+      min-height: 35px;
+    }
+  }
+  
