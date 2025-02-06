@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1 class="gallery-title"><a href="https://www.codealpha.tech/index.html#" target="_blank" class="CodeAlpha"> CodeAlpha</a> <span class="pic">Image</span> Gallery</h1>
+        
+        <div class="main-image-container">
+            <img src="/img2/pic1.jpg" alt="Main" id="mainImage">
+            <button class="nav-button" id="prevButton">❮</button>
+            <button class="nav-button" id="nextButton">❯</button>
+        </div>
+
+        <div class="thumbnail-container">
+            <img src="/img2/pic1.jpg" alt="Thumbnail 1" class="thumbnail active">
+            <img src="/img2/pic4.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic5.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic6.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic7.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic8.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic9.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic10.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic11.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="/img2/pic12.jpg" alt="Thumbnail 2" class="thumbnail">
+            
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Enlarged view">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
