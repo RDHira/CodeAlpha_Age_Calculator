@@ -1,0 +1,101 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b721cb;
+    margin: 0;
+  }
+  
+  .music-player {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    height: 70vh;
+  }
+
+/* Add this to your existing CSS */
+.album-art img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.5s linear; /* Smooth rotation */
+  }
+  
+  /* Rotation animation */
+  @keyframes rotateAlbumArt {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Apply animation when the music is playing */
+  .playing .album-art img {
+    animation: rotateAlbumArt 5s linear infinite; /* Rotate continuously */
+  }
+
+  
+  .music-info {
+    margin-bottom: 15px;
+  }
+  
+  .music-info h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .music-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+  }
+  
+  .progress-container {
+    margin: 15px 0;
+  }
+  
+  .progress-container input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+  }
+  
+  .controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  .controls button:hover {
+    color: #0056b3;
+  }
+  
+  .volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .volume-container input[type="range"] {
+    width: 80px;
+    cursor: pointer;
+  }
